@@ -1,0 +1,12 @@
+<div class="first-screen">
+
+   @@include('../2_header.html',{})
+
+   <div class="first-screen__swiper swiper">
+      <div class="first-screen__swiper-wrapper swiper-wrapper">
+
+         @@loop("./First-Screen-Slide.html","json/first-screen-slide.json")
+
+      </div>
+   </div>
+</div>

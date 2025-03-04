@@ -1,0 +1,22 @@
+[
+   {
+      "name": "О компании",
+      "link": "about.html"
+   },
+   {
+      "name": "Команда",
+      "link": "team.html"
+   },
+   {
+      "name": "Услуги и проекты",
+      "link": "services.html"
+   },
+   {
+      "name": "Новости",
+      "link": "news.html"
+   },
+   {
+      "name": "Контакты",
+      "link": "contacts.html"
+   }
+]
