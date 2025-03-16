@@ -1,0 +1,19 @@
+.moving-line {
+
+   &__swiper {
+      overflow: hidden;
+   }
+
+   &__swiper-wrapper {
+      transition: transform linear;
+   }
+
+   &__swiper-slide {
+      height: 132px;
+      max-width: min-content;
+
+      img {
+         height: 100%;
+      }
+   }
+}

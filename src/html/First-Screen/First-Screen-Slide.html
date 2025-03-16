@@ -1,9 +1,9 @@
-<div class="first-screen__swiper-slide swiper-slide">
+<div class="first-screen__swiper-slide swiper-slide @@if(context.light === true){set-light-header}">
    <img class="first-screen__background" src="@img/@@background" alt="фон" aria-hidden="true">
    <div class="first-screen__container-swiper">
       <div></div>
       <img class="first-screen__logo" src="@img/@@logo" alt="логотип branan">
       <div class="first-screen__text">@@text</div>
-      <div></div>
+      <div class="mobile-hidden"></div>
    </div>
 </div>

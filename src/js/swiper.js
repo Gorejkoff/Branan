@@ -6179,19 +6179,96 @@ var Swiper = function () {
 
 
 if (document.querySelector('.first-screen__swiper')) {
+   const swiperElement = document.querySelector('.first-screen__swiper');
+   const header = document.querySelector('#header');
    const swiper = new Swiper('.first-screen__swiper', {
       spaceBetween: 30,
       loop: true,
       slidesPerView: 1,
       autoplay: {
-         delay: 3000,
+         delay: 5000,
       },
       effect: "fade",
       // crossFade: true,
    });
+
+   swiper.on('activeIndexChange', function () {
+      queueMicrotask(changeColorHeader);
+   });
+
+   function changeColorHeader() {
+      header.classList.toggle('header-light',
+         swiperElement.querySelector('.swiper-slide-active').classList.contains('set-light-header')
+      )
+   }
+
 }
 
 
+if (document.querySelector('.services-section__swiper')) {
+   const swiper = new Swiper('.services-section__swiper', {
+      loop: true,
+      spaceBetween: 20,
+      speed: 300,
+      slidesPerView: 1,
+      grabCursor: true,
+      navigation: {
+         nextEl: ".services-section__button-next",
+         prevEl: ".services-section__button-pref",
+      },
+      pagination: {
+         el: '.services-section__pagination',
+         type: 'fraction',
+      },
+
+      breakpoints: {
+         992: {
+            slidesPerView: 2,
+         },
+         1200: {
+            slidesPerView: 3,
+         },
+      },
+
+   });
+}
+
+if (document.querySelector('.customers__swiper')) {
+   const swiper = new Swiper('.customers__swiper', {
+      loop: true,
+      spaceBetween: 30,
+      speed: 5000,
+      slidesPerView: "auto",
+      // freeMode: true,
+      allowTouchMove: false,
+      autoplay: {
+         delay: 0
+      }
+   });
+}
+
+
+
+if (document.querySelector('.news__swiper')) {
+   const swiper = new Swiper('.news__swiper', {
+      // loop: true,
+      spaceBetween: 20,
+      speed: 300,
+      slidesPerView: 1,
+      navigation: {
+         nextEl: ".news__button-next",
+         prevEl: ".news__button-prev",
+      },
+      breakpoints: {
+         768: {
+            slidesPerView: 2
+         },
+         1024: {
+            slidesPerView: 3
+         },
+      },
+   });
+}
 
 /* создание и ликвидация состояния слайдера в зависимости от ширины вьюпорта */
 // if (document.querySelector('.swiper')) {

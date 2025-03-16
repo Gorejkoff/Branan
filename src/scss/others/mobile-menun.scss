@@ -1,0 +1,40 @@
+@use '../assets/variablesSCSS.scss' as *;
+
+.mobile-menu {
+   position: fixed;
+   top: 0;
+   left: 100%;
+   z-index: 1;
+   width: 100%;
+   height: var(--vh);
+   transition: left $tr-time ;
+   padding-top: 130px;
+   background-color: var(--color-white);
+
+   @media (min-width:1024px) {
+      display: none;
+   }
+
+   &__container {}
+
+   &__body {
+      height: calc(var(--vh) - 130px);
+      padding-bottom: 50px;
+      overflow-x: hidden;
+      overflow-y: auto;
+   }
+
+   .header__nav {
+      padding-left: 43px;
+      padding-right: 43px;
+   }
+
+   .header__nav-list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 57px;
+      font-weight: 500;
+      color: var(--color-feldgrau);
+   }
+
+}

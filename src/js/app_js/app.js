@@ -51,12 +51,13 @@ addHeightVariable();
 // ** ======================= RESIZE ======================  ** //
 window.addEventListener('resize', () => {
    addHeightVariable();
+   closeMenu();
 })
 
 
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
-
+   if (event.target.closest('#button-menu')) { openMenu() }
 })
 
 
@@ -75,4 +76,13 @@ if (HEADER_LANGUAGE) {
       }
    }
    addValue()
+}
+
+
+
+function openMenu() {
+   document.documentElement.classList.toggle('open-mobile-menu')
+}
+function closeMenu() {
+   document.documentElement.classList.remove('open-mobile-menu')
 }

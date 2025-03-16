@@ -1,0 +1,79 @@
+@use '../assets/mixin.scss' as *;
+
+.cooperate-section {
+
+   &__container {}
+
+   &__body {
+      @media (min-width:1024px) {
+         display: flex;
+      }
+   }
+
+   &__image {
+      margin-bottom: 20px;
+      flex: 0 0 50%;
+
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      @include size_adaptive (padding-left, 20, 80, 1024, 1574);
+
+      @media (min-width:1574px) {
+         padding-left: 80px;
+      }
+   }
+
+   &__title {
+      max-width: 612px;
+   }
+
+   &__text {
+      max-width: 565px;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      @media (min-width:1300px) {
+         gap: 30px;
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &__cell {
+      margin-left: calc(var(--padding-container) * -1);
+      margin-right: calc(var(--padding-container) * -1);
+      padding: 25px var(--padding-container);
+      // font-weight: 500;
+      font-size: 16px;
+      line-height: 115%;
+      display: flex;
+      align-items: center;
+
+      @media (min-width:1024px) {
+         margin: 0;
+         padding: 25px;
+         font-size: 22px;
+      }
+
+      &.purple {
+         background-color: var(--color-purple-blue);
+      }
+
+      &.olive {
+         background-color: var(--color-olive);
+      }
+   }
+}

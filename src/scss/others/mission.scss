@@ -1,0 +1,29 @@
+.mission {
+
+   &__container {}
+
+   &__body {
+
+      @media (min-width:1024px) {
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-between;
+         gap: 20px;
+
+      }
+   }
+
+   &__content {
+      max-width: 1020px;
+      margin-bottom: 25px;
+
+      @media (min-width:1024px) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+}

@@ -20,11 +20,12 @@
    <div class="header__container">
       <div class="header__body">
 
-         <nav class="header__nav">
-            <ol class="header__nav-list">
-               <li><a href="about.html">О компании</a></li><li><a href="team.html">Команда</a></li><li><a href="services.html">Услуги и проекты</a></li><li><a href="news.html">Новости</a></li><li><a href="contacts.html">Контакты</a></li>
-            </ol>
-         </nav>
+         <button id="button-menu" type="button" class="button-menu">
+            <span class="button-menu__line-top"></span>
+            <span class="button-menu__line-center"></span>
+            <span class="button-menu__line-bottom"></span>
+         </button>
+
 
          <button class="header__phone" type="button">
             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +36,7 @@
 
          <a class="header__email hover-link" href="mailto:environment@branan.ru">environment@branan.ru</a>
 
-         <div>
+         <div class="header__search">
             <button class="header__search-button" type="button" aria-label="открыть   поиск">
                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 19L14.65 14.65M9 4C11.7614 4 14 6.23858 14 9M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="#33552F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -64,37 +65,37 @@
    <div class="first-screen__swiper swiper">
       <div class="first-screen__swiper-wrapper swiper-wrapper">
 
-         <div class="first-screen__swiper-slide swiper-slide">
+         <div class="first-screen__swiper-slide swiper-slide ">
    <img class="first-screen__background" src="./img/jpg/background-1.jpg" alt="фон" aria-hidden="true">
    <div class="first-screen__container-swiper">
       <div></div>
       <img class="first-screen__logo" src="./img/svg/logo-white.svg" alt="логотип branan">
       <div class="first-screen__text">Более 25 лет на рынке экологического консалтинга</div>
-      <div></div>
+      <div class="mobile-hidden"></div>
    </div>
-</div><div class="first-screen__swiper-slide swiper-slide">
+</div><div class="first-screen__swiper-slide swiper-slide set-light-header">
    <img class="first-screen__background" src="./img/jpg/background-2.jpg" alt="фон" aria-hidden="true">
    <div class="first-screen__container-swiper">
       <div></div>
       <img class="first-screen__logo" src="./img/svg/logo-white.svg" alt="логотип branan">
       <div class="first-screen__text">Более 1000 выполненных проектов</div>
-      <div></div>
+      <div class="mobile-hidden"></div>
    </div>
-</div><div class="first-screen__swiper-slide swiper-slide">
+</div><div class="first-screen__swiper-slide swiper-slide set-light-header">
    <img class="first-screen__background" src="./img/jpg/background-3.jpg" alt="фон" aria-hidden="true">
    <div class="first-screen__container-swiper">
       <div></div>
       <img class="first-screen__logo" src="./img/svg/logo-white.svg" alt="логотип branan">
       <div class="first-screen__text">Работаем по российским и международным стандартам</div>
-      <div></div>
+      <div class="mobile-hidden"></div>
    </div>
-</div><div class="first-screen__swiper-slide swiper-slide">
+</div><div class="first-screen__swiper-slide swiper-slide set-light-header">
    <img class="first-screen__background" src="./img/jpg/background-4.jpg" alt="фон" aria-hidden="true">
    <div class="first-screen__container-swiper">
       <div></div>
       <img class="first-screen__logo" src="./img/svg/logo-white.svg" alt="логотип branan">
       <div class="first-screen__text">Более 1000 выполненных проектов</div>
-      <div></div>
+      <div class="mobile-hidden"></div>
    </div>
 </div>
 
@@ -108,33 +109,383 @@
    <div class="about-section__container">
       <div class="about-section__body">
 
+         <div class="about-section__content">
+            <h1 class="about-section__title title-section">Бранан Энвайронмент</h1>
+            <div class="about-section__text">Компания, предоставляющая широкий спектр консультационных услуг в области охраны окружающей природной и социальной среды, устойчивого развития, охраны труда и промышленной безопасности</div>
+         </div>
+
          <div class="about-section__image">
             <img src="./img/jpg/image-1.jpg" alt="очисние сооружения">
-         </div>
-         <div class="about-section__content">
-            <div class="about-section__title title-section">Бранан Энвайронмент</div>
-            <div class="about-section__text">Компания, предоставляющая широкий спектр консультационных услуг в области охраны окружающей природной и социальной среды, устойчивого развития, охраны труда и промышленной безопасности</div>
          </div>
 
       </div>
    </div>
 </section>
 
+         <section class="mission padding-section">
+   <div class="mission__container">
+      <div class="mission__body">
+         <div class="mission__content">
+            <div class="mission__title title-section">Наша миссия </div>
+            <div class="text-24">Содействовать клиентам в улучшении экологических и социальных показателей деятельности и способствовать устойчивому развитию их бизнеса</div>
+         </div>
+         <div>
+            <a href="#0" class="button">Узнать больше</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+         <section class="services-section padding-section">
+   <img class="services-section__background" src="./img/svg/background-left.svg" alt="ветка" aria-hidden="true">
+   <div class="services-section__container">
+      <div class="services-section__header">
+         <h2 class="services-section__title title-section">Основные виды наших услуг</h2>
+         <div class="services-section__image">
+            <img src="./img/webp/image-1.webp" alt="ветка с листьями">
+         </div>
+      </div>
+
+      <div class="services-section__swiper swiper">
+         <div class="swiper-wrapper">
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-2.jpg" alt="завод">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Оценка загрязнения и очистка территории</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-3.jpg" alt="город">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Аудит по ООС, ОТ, ПБ</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-4.jpg" alt="природа">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Инженерно-экологические изыскания</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-2.jpg" alt="завод">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Оценка загрязнения и очистка территории</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-3.jpg" alt="город">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Аудит по ООС, ОТ, ПБ</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+            <a href="#0" class="services-section__slide swiper-slide">
+               <div>
+                  <div class="services-section__slide-image">
+                     <img src="./img/jpg/image-4.jpg" alt="природа">
+                  </div>
+               </div>
+               <div class="services-section__slide-footer">
+                  <div class="services-section__slide-text">Инженерно-экологические изыскания</div>
+                  <div class="services-section__slide-arrow">
+                     <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.4354 8.70711C26.8259 8.31658 26.8259 7.68342 26.4354 7.29289L20.0715 0.928932C19.6809 0.538408 19.0478 0.538408 18.6572 0.928932C18.2667 1.31946 18.2667 1.95262 18.6572 2.34315L24.3141 8L18.6572 13.6569C18.2667 14.0474 18.2667 14.6805 18.6572 15.0711C19.0478 15.4616 19.6809 15.4616 20.0715 15.0711L26.4354 8.70711ZM0.272461 9L25.7283 9V7L0.272461 7L0.272461 9Z" fill="#D8D4A5" />
+                     </svg>
+                  </div>
+               </div>
+            </a>
+
+         </div>
+      </div>
+
+      <div class="services-section__swiper-nav swiper-nav">
+
+         <button type="button" class="services-section__button-pref swiper-button" aria-label="листать слайдер в лево">
+            <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM51 9H1V7H51V9Z" fill="#D8D4A5" />
+            </svg>
+         </button>
+
+         <div class="services-section__pagination pagination-fraction"></div>
+
+         <button type="button" class="services-section__button-next swiper-button" aria-label="листать слайдер в право">
+            <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0V9Z" fill="#D8D4A5" />
+            </svg>
+         </button>
+
+      </div>
+
+      <div class="services-section__text text-24">Среди наших клиентов - международные финансовые организации, инвестиционные фонды, международные компании, а также крупнейшие компании России и ближнего зарубежья</div>
+
+
+   </div>
+</section>
+
+         <section class="cooperate-section padding-section">
+   <div class="cooperate-section__container">
+      <div class="cooperate-section__body">
+         <div class="cooperate-section__image">
+            <img src="./img/jpg/image-5.jpg" alt="озёра в лесу">
+         </div>
+         <div class="cooperate-section__content">
+            <h2 class="cooperate-section__title title-section">Сотрудничаем с международными компаниями</h2>
+            <div class="cooperate-section__text text-24">При реализации крупных международных проектов мы успешно сотрудничаем с ведущими мировыми консалтинговыми и инжиниринговыми компаниями, такими как AECOM , Antea, Arcadis, Convergence Consulting, ERM, HPC, PWC, RINA и др. </div>
+            <div class="cooperate-section__grid">
+               <div class="cooperate-section__cell purple">Сочетаем знание международных стандартов и российского законодательства</div>
+               <div class="cooperate-section__cell olive">Наша компания является членом Inogen Alliance, глобальной сети консалтинговых компаний в области устойчивого развития</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+         <section class="customers padding-section">
+   <div class="customers__container">
+
+      <h2 class="customers__title title-section">Наши клиенты</h2>
+
+      <div class="customers__swiper swiper">
+         <div class="customers__swiper-wrapper swiper-wrapper">
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-1.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-2.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-3.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-4.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-5.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-1.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-2.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-3.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-4.svg" alt="логотип партнёра">
+            </a>
+            <a href="#0" class="customers__swiper-slide swiper-slide" aria-label="ссылка к партнёрам">
+               <img src="./img/svg/client-logo-5.svg" alt="логотип партнёра">
+            </a>
+         </div>
+      </div>
+
+   </div>
+</section>
+
+         <section class="news padding-section">
+   <div class="news__container">
+
+      <div class="news__header">
+         <div class="title-section">Новости и события</div>
+         <!-- <a href="news.html" class="button">Смотреть все</a> -->
+      </div>
+
+      <div class="news__swiper swiper">
+         <div class="news__swiper-wrapper swiper-wrapper">
+            <a href="news.html" class="news__card swiper-slide">
+               <div class="news__card-image">
+                  <div class="news__card-image-sell">
+                     <img src="./img/jpg/image-6.jpg" alt="листья">
+                  </div>
+               </div>
+               <div class="news__card-text text-20">Уведомление о проведении общественных обсуждений (в форме общественных слушаний) по объекту государственной экологической экспертизы «Деятельность судов ООО </div>
+               <div class="news__card-date text-20">
+                  <time datetime="2023-10-26">Окт 26, 2023</time>
+               </div>
+            </a>
+            <a href="news.html" class="news__card swiper-slide">
+               <div class="news__card-image">
+                  <div class="news__card-image-sell">
+                     <img src="./img/jpg/image-7.jpg" alt="город">
+                  </div>
+               </div>
+               <div class="news__card-text text-20">Уведомление о проведении общественных обсуждений (в форме общественных слушаний) по объекту государственной экологической экспертизы «Деятельность судов ООО </div>
+               <div class="news__card-date text-20">
+                  <time datetime="2023-10-26">Окт 26, 2023</time>
+               </div>
+            </a>
+            <a href="news.html" class="news__card swiper-slide">
+               <div class="news__card-image">
+                  <div class="news__card-image-sell">
+                     <img src="./img/jpg/image-8.jpg" alt="завод">
+                  </div>
+               </div>
+               <div class="news__card-text text-20">Уведомление о проведении общественных обсуждений (в форме общественных слушаний) по объекту государственной экологической экспертизы «Деятельность судов ООО </div>
+               <div class="news__card-date text-20">
+                  <time datetime="2023-10-26">Окт 26, 2023</time>
+               </div>
+            </a>
+         </div>
+      </div>
+
+      <div class="news__nav">
+         <button class="news__button-next" type="button">
+            <svg width="29" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM51 9H1V7H51V9Z" fill="#D8D4A5" />
+            </svg>
+         </button>
+         <button class="news__button-prev" type="button">
+            <svg width="29" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M50.7071 8.70711C51.0976 8.31658 51.0976 7.68342 50.7071 7.29289L44.3431 0.928932C43.9526 0.538408 43.3195 0.538408 42.9289 0.928932C42.5384 1.31946 42.5384 1.95262 42.9289 2.34315L48.5858 8L42.9289 13.6569C42.5384 14.0474 42.5384 14.6805 42.9289 15.0711C43.3195 15.4616 43.9526 15.4616 44.3431 15.0711L50.7071 8.70711ZM0 9H50V7H0V9Z" fill="#D8D4A5" />
+            </svg>
+         </button>
+      </div>
+
+      <a href="news.html" class="button" data-da=".news__header,1,1024">Смотреть все</a>
+
+   </div>
+</section>
 
 
 
       </div>
 
       <footer id="footer" class="footer">
+   <div class="footer__image">
+      <img src="./img/jpg/background-5.jpg" alt="img" aria-hidden="true">
+   </div>
+
    <div class="footer__container">
       <div class="footer__body">
+
+         <form class="footer__feedback" action="#" method="post" name="feedback" id="feedback">
+            <div class="footer__title">Форма обратной связи</div>
+            <div class="footer__inputs">
+               <div class="footer__inputs-block">
+                  <label>
+                     <span class="input-name">ваше имя</span>
+                     <input class="input-field" type="text" name="name" checked>
+                  </label>
+                  <label>
+                     <span class="input-name">ваш телефон / электронная почта</span>
+                     <input class="input-field" type="text" name="contact" checked>
+                  </label>
+               </div>
+               <label class="input-check">
+                  <input type="checkbox" name="assent" required>
+                  <span class="input-check-icon"></span>
+                  <span>Согласие на обработку <a href="#0">персональных данных</a></span>
+               </label>
+            </div>
+            <div class="footer__feedback-button">
+               <button class="button-transparent" type="submit">Отправить</button>
+            </div>
+         </form>
+
+         <nav>
+            <ol class="footer__list">
+               <li><a href="about.html">О компании</a></li>
+               <li><a href="team.html">Команда</a></li>
+               <li><a href="services.html">Услуги и проекты</a></li>
+               <li><a href="new.html">Новости</a></li>
+               <li><a href="contacts.html">Контакты</a></li>
+            </ol>
+         </nav>
+
+         <div class="footer__under">
+            <div class="footer__under-phone">
+               <a class="phone" href="tel:74956041472">
+                  <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="24.5" cy="24.5" r="24" stroke="#B5D4AB" />
+                     <path d="M27.12 19C28.0967 19.1906 28.9944 19.6683 29.698 20.3719C30.4017 21.0756 30.8794 21.9733 31.07 22.95M27.12 15C29.1492 15.2254 31.0416 16.1342 32.4862 17.577C33.9309 19.0198 34.842 20.911 35.07 22.94M23.297 26.8631C22.0954 25.6615 21.1466 24.3028 20.4506 22.8532C20.3907 22.7285 20.3608 22.6662 20.3378 22.5873C20.2561 22.3069 20.3148 21.9627 20.4848 21.7253C20.5326 21.6584 20.5898 21.6013 20.7041 21.487C21.0537 21.1374 21.2285 20.9626 21.3428 20.7868C21.7738 20.1239 21.7738 19.2693 21.3428 18.6064C21.2285 18.4307 21.0537 18.2559 20.7041 17.9062L20.5092 17.7114C19.9778 17.1799 19.7121 16.9142 19.4267 16.7699C18.8591 16.4828 18.1889 16.4828 17.6213 16.7699C17.3359 16.9142 17.0702 17.1799 16.5387 17.7114L16.3811 17.869C15.8515 18.3986 15.5867 18.6634 15.3844 19.0235C15.16 19.423 14.9986 20.0435 15 20.5017C15.0012 20.9146 15.0813 21.1969 15.2415 21.7613C16.1025 24.7947 17.727 27.6571 20.115 30.045C22.503 32.433 25.3653 34.0575 28.3987 34.9185C28.9632 35.0787 29.2454 35.1588 29.6583 35.16C30.1165 35.1614 30.737 35 31.1365 34.7756C31.4966 34.5733 31.7614 34.3085 32.291 33.7789L32.4486 33.6213C32.9801 33.0898 33.2458 32.8241 33.3902 32.5387C33.6772 31.9712 33.6772 31.3009 33.3902 30.7333C33.2458 30.448 32.9801 30.1822 32.4486 29.6508L32.2538 29.4559C31.9042 29.1063 31.7294 28.9315 31.5536 28.8172C30.8907 28.3862 30.0361 28.3862 29.3732 28.8172C29.1975 28.9315 29.0226 29.1063 28.673 29.4559C28.5587 29.5702 28.5016 29.6274 28.4348 29.6752C28.1973 29.8453 27.8531 29.904 27.5727 29.8222C27.4938 29.7992 27.4315 29.7693 27.3068 29.7094C25.8572 29.0134 24.4985 28.0646 23.297 26.8631Z" stroke="#98A24C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span> +7 (495) 604-14-72</span>
+               </a>
+            </div>
+            <div class="footer__under-email">
+               <a href="mailto:environment@branan.ru">environment@branan.ru</a>
+            </div>
+            <div class="footer__under-icon">
+               <img src="./img/svg/logo-color.svg" alt="логотип Branan">
+            </div>
+            <div class="footer__under-link text-20">
+               <div>Copyright 2024</div>
+               <a href="#0">Политика конфиденциальности</a>
+            </div>
+         </div>
 
       </div>
    </div>
 </footer>
 
+
+
    </div>
 
+   <div class="mobile-menu">
+   <div class="mobile-menu__container">
+      <div class="mobile-menu__body">
+
+
+         <nav class="header__nav" data-da=".header__body,0,1024">
+            <ol class="header__nav-list">
+               <li><a class="hover-link" href="about.html">О компании</a></li><li><a class="hover-link" href="team.html">Команда</a></li><li><a class="hover-link" href="services.html">Услуги и проекты</a></li><li><a class="hover-link" href="news.html">Новости</a></li><li><a class="hover-link" href="contacts.html">Контакты</a></li>
+            </ol>
+         </nav>
+      </div>
+   </div>
+</div>
 
    <script defer src='./js/app.js'></script>
 

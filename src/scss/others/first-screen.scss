@@ -1,3 +1,5 @@
+@use "../assets/mixin.scss" as *;
+
 .first-screen {
    position: relative;
    height: 100vh;
@@ -34,6 +36,7 @@
    }
 
    &__container-swiper {
+      padding-bottom: 47px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -60,8 +63,14 @@
    &__text {
       max-width: 1040px;
       font-weight: 500;
-      font-size: 57px;
+      font-size: 16px;
       line-height: 105%;
+
+      @include size_adaptive (font-size, 16, 57, 360, 1024);
+
+      @media (min-width:1024px) {
+         font-size: 57px;
+      }
    }
 
    .swiper-slide-active {

@@ -1,0 +1,35 @@
+.customers {
+   margin-bottom: 80px;
+
+   &__container {}
+
+   &__title {
+      margin-bottom: 20px;
+
+      @media (min-width:768px) {
+         margin-bottom: 50px;
+      }
+   }
+
+   &__swiper {
+      overflow: hidden;
+   }
+
+   &__swiper-wrapper {
+      transition: transform linear;
+   }
+
+   &__swiper-slide {
+      height: 50px;
+      max-width: min-content;
+
+      @media (min-width:1024px) {
+         height: 132px;
+      }
+
+      img {
+         height: 100%;
+      }
+   }
+
+}
