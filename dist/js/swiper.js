@@ -6233,19 +6233,31 @@ if (document.querySelector('.services-section__swiper')) {
    });
 }
 
-if (document.querySelector('.customers__swiper')) {
-   const swiper = new Swiper('.customers__swiper', {
-      loop: true,
-      spaceBetween: 30,
-      speed: 5000,
-      slidesPerView: "auto",
-      // freeMode: true,
-      allowTouchMove: false,
-      autoplay: {
-         delay: 0
-      }
-   });
-}
+// if (document.querySelector('.customers__swiper')) {
+//    const swiper = new Swiper('.customers__swiper', {
+//       loop: true,
+//       spaceBetween: 30,
+//       speed: 2000,
+//       slidesPerView: "auto",
+//       // freeMode: true,
+//       allowTouchMove: false,
+//       autoplay: {
+//          delay: 0
+//       }
+//    });
+// }
+// if (document.querySelector('.moving-line__swiper')) {
+//    const swiper = new Swiper('.moving-line__swiper', {
+//       loop: true,
+//       spaceBetween: 24,
+//       speed: 5000,
+//       slidesPerView: "auto",
+//       allowTouchMove: false,
+//       autoplay: {
+//          delay: 0
+//       }
+//    });
+// }
 
 
 

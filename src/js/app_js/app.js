@@ -86,3 +86,5 @@ function openMenu() {
 function closeMenu() {
    document.documentElement.classList.remove('open-mobile-menu')
 }
+
+

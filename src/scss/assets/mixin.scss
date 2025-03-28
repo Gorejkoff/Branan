@@ -3,14 +3,25 @@
 // $max - максимальное значение,
 // $minW - минимальная ширина вьюпорта,
 // $maxW - махимальная ширина вьюпорта
+@use 'sass:math';
 
+@function delete-unit($number) {
+   @return math.div($number, ($number * 0 + 1));
+}
+
+// плавное изменение величины в 'px'
 @mixin size_adaptive ($prop, $min, $max, $minW, $maxW) {
-   $minpx : $min + px;
-   $minWidth : $minW + px;
-   $maxWidth : $maxW - 0.02 + px;
+   $minNum: delete-unit($min);
+   $maxNum: delete-unit($max);
+   $minWNum: delete-unit($minW);
+   $maxWNum: delete-unit($maxW);
+
+   $minpx : $minNum + px;
+   $minWidth : $minWNum + px;
+   $maxWidth : $maxWNum - 0.02 + px;
 
    @media (min-width: $minWidth) and (max-width:$maxWidth) {
-      #{$prop}: calc($minpx + (100vw - $minWidth)/($maxW - $minW)*($max - $min));
+      #{$prop}: calc($minpx + (100vw - $minWidth)/($maxWNum - $minWNum)*($maxNum - $minNum));
    }
 }
 
@@ -22,12 +33,18 @@
 // $minW - минимальная ширина вьюпорта,
 // $maxW - махимальная ширина вьюпорта
 
+// плавное изменение величины flex в 'px' 
 @mixin size_adaptive_flex ($grow, $shrink, $min, $max, $minW, $maxW) {
-   $minpx : $min + px;
-   $minWidth : $minW + px;
-   $maxWidth : $maxW - 0.02 + px;
+   $minNum: delete-unit($min);
+   $maxNum: delete-unit($max);
+   $minWNum: delete-unit($minW);
+   $maxWNum: delete-unit($maxW);
+
+   $minpx : $minNum + px;
+   $minWidth : $minWNum + px;
+   $maxWidth : $maxWNum - 0.02 + px;
 
    @media (min-width: $minWidth) and (max-width:$maxWidth) {
-      flex: $grow $shrink calc($minpx + (100vw - $minWidth)/($maxW - $minW)*($max - $min));
+      flex: $grow $shrink calc($minpx + (100vw - $minWidth)/($maxWNum - $minWNum)*($maxNum - $minNum));
    }
 }

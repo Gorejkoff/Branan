@@ -12,12 +12,10 @@
    }
 
    &__swiper {
+      --gap: 30px;
       overflow: hidden;
    }
 
-   &__swiper-wrapper {
-      transition: transform linear;
-   }
 
    &__swiper-slide {
       height: 50px;

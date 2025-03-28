@@ -87,6 +87,8 @@ function closeMenu() {
    document.documentElement.classList.remove('open-mobile-menu')
 }
 
+
+
 // перемещение блоков при адаптиве
 // data-da=".class,3,768" 
 // класс родителя куда перемещать
@@ -142,3 +144,13 @@ function moving(e, order, addressMove) {
 }
 
 
+
+if (document.querySelector('.js-moving-line')) {
+   queueMicrotask(() => {
+      const list = document.querySelectorAll('.js-moving-line');
+      list.forEach((e) => {
+         e.style.setProperty('--moving-line-quantity', e.firstElementChild.children.length)
+         e.append(e.firstElementChild.cloneNode(true));
+      })
+   })
+}

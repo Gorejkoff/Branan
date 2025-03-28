@@ -1,0 +1,65 @@
+@use "../assets/mixin.scss" as *;
+
+.about-info-section {
+   position: relative;
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include size_adaptive (gap, 40, 163, 992, 1300);
+
+      @media (min-width:992px) {
+         flex-direction: row;
+      }
+
+      @media (min-width:1300px) {
+         gap: 163px;
+      }
+   }
+
+   &__image {
+      @media (min-width:992px) {
+         flex: 0 0 min(498px, 45%);
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__content {
+      @media (min-width:992px) {
+         flex: 0 1 672px;
+      }
+   }
+
+   &__text {
+      @media (min-width:992px) {
+         margin-bottom: 50px;
+      }
+
+      &>*:not(:last-child) {
+         margin-bottom: 20px;
+
+         @media (min-width:992px) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &__backgroung {
+      display: none;
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      z-index: -1;
+
+      @media (min-width:1024px) {
+         display: block;
+      }
+   }
+}

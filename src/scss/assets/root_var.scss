@@ -10,18 +10,19 @@
    --color-feldgrau: #485b4e;
    --color-green: #536e4d;
    --color-leafy-green: #33552F;
+   --color-mignonette-green: #597653;
    --color-green-light: #8DBE7E;
    --color-green-pale: #d8d4a5;
    --color-olive: #98a24c;
    --color-green-tea: #b5d4ab;
    --color-green-tea-light: #d8e9d2;
+   --color-yellowish-green: #61825a;
    --color-pale-green: #ddd0bd;
    --color-modal-bg: rgba(0, 0, 0, 0.6);
-
+   --color-agate-grey: #b6c1b1;
    --vh: 100vh;
 
    @supports (height: 100dvh) {
       --vh: 100dvh;
    }
-
 }

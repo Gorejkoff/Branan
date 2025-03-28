@@ -1,0 +1,125 @@
+@use "../assets/mixin.scss" as *;
+
+.certificates {
+   border-top: 1px solid var(--color-yellowish-green);
+
+   &__container {}
+
+   &__header {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+
+      @media (min-width:992px) {
+         flex-direction: row;
+         margin-bottom: 43px;
+      }
+
+      @media (min-width:1024px) {}
+
+      .title-section {
+         margin: 0;
+      }
+   }
+
+   &__text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 141%;
+
+      @media (min-width:992px) {
+         flex: 0 1 420px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 18px;
+      }
+   }
+
+   &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      @media (min-width:768px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width:1200px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+
+   &__item {
+      display: flex;
+      background-color: var(--color-anthracit);
+      min-height: 316px;
+   }
+
+   &__item-info {
+      padding: 0 0 30px 20px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      font-size: 20px;
+
+      @media (min-width:1024px) {
+         padding: 0 0 40px 40px;
+      }
+   }
+
+   &__item-background {
+      img {
+         margin-left: -20px;
+         max-height: 154px;
+         max-height: 135px;
+
+         @media (min-width:1024px) {
+            margin-left: -40px;
+         }
+      }
+   }
+
+   &__item-name {
+      flex: 1 1 auto;
+      margin-right: -60px;
+
+      @media (min-width:992px) {
+         margin-right: 0;
+      }
+   }
+
+   &__item-standard {
+      margin-top: 8px;
+
+      @media (min-width:992px) {
+         margin-top: 30px;
+      }
+   }
+
+   &__item-visualization {
+      padding: 20px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @media (min-width:1350px) {
+         padding: 30px 30px 40px;
+      }
+   }
+
+   &__item-image {
+      img {
+         max-width: 68px;
+
+         @include size_adaptive (max-width, 68, 96, 768, 1350);
+
+         @media (min-width:1350px) {
+            max-width: 96px;
+         }
+      }
+   }
+}
