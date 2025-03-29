@@ -9,6 +9,7 @@
       margin-bottom: 76px;
    }
 
+
    &__container-center {
       max-width: 1790px;
    }
@@ -159,4 +160,21 @@
       }
    }
 
+   &__background {
+      position: relative;
+   }
+
+   &__background-image {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 500px;
+      transform: rotate3d(0, 1, 0, 180deg);
+
+      @media (min-width:1024px) {
+         display: block;
+      }
+   }
 }

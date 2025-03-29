@@ -1138,7 +1138,6 @@ body {
 }
 
 .services-section__slide-text {
-  max-width: 300px;
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
@@ -1754,6 +1753,42 @@ body {
   transition: opacity 0.3s;
 }
 
+.team__background {
+  position: relative;
+}
+
+.team__background-image {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 500px;
+  -webkit-transform: rotate3d(0, 1, 0, 180deg);
+          transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.services {
+  position: relative;
+  margin-bottom: 176px;
+}
+
+.services__gryd {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.services__background {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+}
+
 .news {
   margin-bottom: 30px;
 }
@@ -1888,6 +1923,10 @@ body {
     margin-bottom: 40px;
   }
 
+  .services-section__slide-text {
+    max-width: 300px;
+  }
+
   .moving-line__swiper-slide {
     padding: 40px 50px;
     height: 147px;
@@ -1937,6 +1976,15 @@ body {
     top: 70%;
     bottom: auto;
     font-size: 14px;
+  }
+
+  .services__gryd {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 28px;
+       -moz-column-gap: 28px;
+            column-gap: 28px;
+    row-gap: 95px;
   }
 }
 
@@ -2243,7 +2291,7 @@ body {
   }
 
   .services-section__slide-text {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .services-section__slide-arrow svg {
@@ -2395,6 +2443,36 @@ body {
     padding-bottom: 139%;
   }
 
+  .team__background-image {
+    display: block;
+  }
+
+  .services {
+    margin-bottom: 300px;
+  }
+
+  .services__gryd {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services__gryd > *:nth-child(5n+1) {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
+  .services__gryd > *:nth-child(5n+1) .services-section__slide-image {
+    padding-bottom: 33.304%;
+  }
+
+  .services__gryd > *:nth-child(5n+1) .services-section__slide-text {
+    max-width: 777px;
+  }
+
+  .services__background {
+    display: block;
+  }
+
   .news {
     margin-bottom: 150px;
   }
@@ -2413,6 +2491,10 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .services-section__slide-text {
+    font-size: 24px;
+  }
+
   .certificates__content {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;

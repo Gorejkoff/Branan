@@ -115,12 +115,19 @@
    }
 
    &__slide-text {
-      max-width: 300px;
       font-weight: 500;
       font-size: 16px;
       line-height: 125%;
 
+      @media (min-width:768px) {
+         max-width: 300px;
+      }
+
       @media (min-width:1024px) {
+         font-size: 20px;
+      }
+
+      @media (min-width:1200px) {
          font-size: 24px;
       }
    }
