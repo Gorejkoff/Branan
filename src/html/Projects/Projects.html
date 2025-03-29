@@ -1,0 +1,12 @@
+<div class="projects">
+   <div class="projects__container">
+
+      @@loop('./Projects-Item.html','json/projects.json')
+
+      <a href="#0" class="button-border">ПОКАЗАТЬ ЕЩЕ</a>
+
+   </div>
+
+   <img class="projects__background" src="@img/svg/background-right.svg" alt="листья" aria-hidden="true">
+
+</div>
