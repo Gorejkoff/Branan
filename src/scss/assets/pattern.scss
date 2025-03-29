@@ -63,6 +63,9 @@ body {
 
    &__container {
       margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
 
       @media (min-width:768px) {
          margin-bottom: 40px;
@@ -71,6 +74,16 @@ body {
       @media (min-width:1024px) {
          margin-bottom: 60px;
       }
+   }
+
+   &__label {
+      padding: 9px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      background-color: var(--background-label, var(--color-anthracit));
    }
 }
 
