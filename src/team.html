@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   @@include('html/1_head.html',{"title":"Team"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/Top-Section/Top-Section.html',{})
+
+      <div class="main">
+
+         <div class="bread-crumbs__container">
+            @@include('html/Bread_Crumbs/Bread_Crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Команда", "link": "team.html"}]})
+         </div>
+
+         <div class="title__container">
+            <h1 class="title">Команда профессионалов</h1>
+         </div>
+
+
+         @@include('html/Team/Team.html',{})
+
+
+      </div>
+
+      @@include('html/4_footer.html',{})
+
+   </div>
+
+   @@include('html/Mobile-Menu/Mobile-Menu.html',{})
+
+   @@include('html/3_scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>

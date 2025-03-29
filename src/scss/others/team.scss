@@ -1,0 +1,162 @@
+@use '../assets/variablesSCSS.scss' as *;
+@use '../assets/mixin.scss' as *;
+
+.team {
+   margin-bottom: 124px;
+   overflow: hidden;
+
+   @media (min-width:1024px) {
+      margin-bottom: 76px;
+   }
+
+   &__container-center {
+      max-width: 1790px;
+   }
+
+   &__cell {
+      position: relative;
+
+      &:hover .team__cell-data {
+         opacity: 1;
+         pointer-events: all;
+      }
+   }
+
+
+   &__image {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 100%;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__name {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 20px;
+   }
+
+   &__position {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 141%;
+      color: var(--color-pale-green);
+   }
+
+   &__gallery-top {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @media (min-width:768px) {
+         margin-bottom: 116px;
+         flex-direction: row;
+      }
+
+      @media (min-width:$max-width-container) {
+         gap: 127px;
+      }
+
+      &>* {
+         flex: 0 1 420px;
+      }
+   }
+
+   &__gallery-center {
+      margin-bottom: 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      @include size_adaptive (gap, 40, 80, 768, $max-width-container);
+
+      @media (min-width:768px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (min-width:$max-width-container) {
+         gap: 80px;
+      }
+   }
+
+   &__gallery-bottom {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      justify-content: center;
+
+      @media (min-width:768px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: min(454px, 28.128vw) min(369px, 22.86vw) min(454px, 28.128vw);
+         grid-template-rows: 1fr 1fr;
+         justify-content: space-between;
+
+         &>*:nth-child(odd) {
+            grid-row: span 2;
+            display: flex;
+            align-items: center;
+
+            &>* {
+               width: 100%;
+            }
+
+            .team__image {
+               padding-bottom: 139%;
+            }
+         }
+
+      }
+
+      @media (min-width:$max-width-container) {
+         row-gap: 55px;
+         column-gap: 110px;
+      }
+   }
+
+   &__cell-data {
+      padding: 20px;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0%;
+      width: 100%;
+      max-width: calc(100vw - var(--padding-container) * 2);
+      background-color: var(--color-anthracit);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 141%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+
+      @media (min-width:768px) {
+         padding: 30px;
+         width: 626px;
+         top: 70%;
+         bottom: auto;
+         font-size: 14px;
+      }
+
+      @media (min-width:1200px) {
+         padding: 50px;
+         left: 40%;
+      }
+   }
+
+}

@@ -10,17 +10,14 @@ body {
    --max-width-container: #{$max-width-container};
    scrollbar-gutter: stable;
    background-color: var(--color-green);
-   // @media (min-width:768px) {
-   //    --padding-container: #{$padding-tablet};
-   // }
-
-   // @media (min-width:1024px) {
-   //    --padding-container: #{$padding-desktop};
-   // }
-
    --width-history-gallery: calc(100vw - var(--padding-container) * 2);
 
+   @media (min-width:768px) {
+      --padding-container: #{$padding-tablet};
+   }
+
    @media (min-width:1024px) {
+      --padding-container: #{$padding-desktop};
       @include size_adaptive (--width-history-gallery, 650, 895, 1024, 1300);
    }
 

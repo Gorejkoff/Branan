@@ -89,6 +89,34 @@ function closeMenu() {
 
 
 
+if (document.querySelector('.team__cell-data')) {
+   const list_data = document.querySelectorAll('.team__cell-data');
+   let padding_container;
+   let max_right_position;
+
+   function setProp() {
+      padding_container = parseInt(window.getComputedStyle(document.body).getPropertyValue('--padding-container'))
+      max_right_position = document.body.clientWidth - padding_container;
+   }
+
+   function setPositionElement(e) {
+      e.style.transform = ``;
+      let position = e.getBoundingClientRect();
+      let value_offset = max_right_position - position.right;
+      if (value_offset < 0) {
+         e.style.transform = `translateX(${value_offset}px)`;
+      }
+   }
+   function setPosition() {
+      setProp();
+      list_data.forEach(e => { setPositionElement(e) })
+   }
+   setPosition();
+
+   window.addEventListener('resize', setPosition)
+}
+
+
 // перемещение блоков при адаптиве
 // data-da=".class,3,768" 
 // класс родителя куда перемещать
