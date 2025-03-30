@@ -104,8 +104,12 @@
          display: block;
          padding-bottom: 10px;
          font-weight: 500;
-         font-size: 24px;
+         font-size: 20px;
          line-height: 141%;
+
+         @media (min-width:768px) {
+            font-size: 24px;
+         }
       }
    }
 

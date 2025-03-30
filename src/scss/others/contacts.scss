@@ -1,0 +1,131 @@
+.contacts {
+   position: relative;
+   margin-bottom: 80px;
+
+   @media (min-width:1024px) {
+      margin-bottom: 92px;
+   }
+
+   &__container {}
+
+   &__grid {
+
+      @media (min-width:1024px) {
+         display: grid;
+         grid-template-columns: 1fr auto auto;
+         row-gap: 80px;
+
+         &>* {
+            padding-top: 20px;
+            padding-left: 28px;
+
+            &:nth-child(3n+1) {
+               padding-left: 0;
+            }
+
+            &:nth-child(-n+9) {
+               border-top: 1px solid var(--color-yellowish-green);
+            }
+         }
+      }
+   }
+
+   &__grid-header {
+      padding-top: 20px;
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--color-pale-green);
+
+      @media (max-width:1023.98px) {
+         margin-top: 32px;
+         margin-bottom: 12px;
+         border-top: 1px solid var(--color-yellowish-green);
+      }
+
+      @media (min-width:1024px) {
+         font-size: 40px;
+      }
+   }
+
+   &__grid-address {
+      display: block;
+      font-size: 20px;
+      line-height: 137%;
+      max-width: 250px;
+      margin-bottom: 20px;
+
+      @media (min-width:1024px) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__grid-show {
+      .button {
+         margin-left: 0;
+         margin-right: 0;
+      }
+   }
+
+   &__grid-phone {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__grid-phone-title {
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--color-olive);
+   }
+
+   &__grid-phone-item {
+      font-weight: 500;
+      font-size: 36px;
+
+      @media (min-width:1024px) {
+         font-size: 40px;
+      }
+   }
+
+   &__grid-email {
+      padding: 20px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--color-mignonette-green);
+      font-weight: 500;
+      font-size: 20px;
+
+      @media (min-width:1024px) {
+         padding: 30px 70px;
+         font-size: 40px;
+      }
+
+      svg {
+         width: 30px;
+      }
+   }
+
+   &__map {
+      position: relative;
+      padding-bottom: 62%;
+      overflow: hidden;
+
+      @media (min-width:1024px) {
+         grid-column: span 2;
+      }
+   }
+
+   &__background {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: rotate3d(0, 1, 0, 180deg);
+      max-width: 30%;
+
+      @media (min-width:1024px) {
+         display: block;
+      }
+   }
+}
