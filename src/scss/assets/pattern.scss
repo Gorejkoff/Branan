@@ -48,6 +48,18 @@ body {
    max-width: var(--max-width-container);
 }
 
+.bg-anthracit {
+   background-color: var(--color-anthracit);
+}
+
+.bg-olive {
+   background-color: var(--color-olive);
+}
+
+.bg-purple {
+   background-color: var(--color-purple-blue);
+}
+
 .title {
    font-size: 24px;
    text-transform: uppercase;
@@ -83,7 +95,7 @@ body {
       justify-content: center;
       font-weight: 700;
       font-size: 14px;
-      background-color: var(--background-label, var(--color-anthracit));
+      text-transform: uppercase;
    }
 }
 
@@ -160,10 +172,6 @@ body {
    font-size: 20px;
    line-height: 150%;
    text-transform: uppercase;
-
-   @media (min-width:1024px) {
-      padding: 32px 112px;
-   }
 }
 
 .baner-image {

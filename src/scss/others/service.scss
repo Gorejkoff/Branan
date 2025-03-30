@@ -1,0 +1,137 @@
+.service {
+   @media (min-width:992px) {
+      --width-left: 408px;
+      --width-right: 886px;
+      --gap: 40px;
+   }
+
+   &__container {}
+
+   &__body {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--gap, 60px);
+
+
+      @media (min-width:992px) {
+         flex-direction: row;
+      }
+   }
+
+   &__illustration {
+      flex: 0 0 var(--width-left);
+
+      @media (min-width:992px) {
+         order: 1;
+      }
+   }
+
+   &__cell {
+      margin-bottom: 20px;
+   }
+
+   &__cell-info {
+      padding: 28px 24px;
+      min-height: 220px;
+   }
+
+   &__cell-number {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--color-green-tea);
+   }
+
+   &__cell-text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 119%;
+   }
+
+   &__cell-image {
+      position: relative;
+      padding-bottom: 64%;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__other {
+      padding: 28px;
+      min-height: 181px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border: 1px solid var(--color-olive);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 125%;
+
+      span {
+         max-width: 200px;
+
+         &:first-child {
+            align-self: flex-end;
+         }
+      }
+   }
+
+   &__text {
+      flex: 0 1 var(--width-right);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 141%;
+
+      @media (min-width:992px) {
+         order: 2;
+      }
+
+      &>* {
+         margin-bottom: 20px;
+      }
+
+      strong {
+         display: block;
+         padding-bottom: 10px;
+         font-weight: 500;
+         font-size: 24px;
+         line-height: 141%;
+      }
+   }
+
+   &__nav {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: var(--gap, 20px);
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
+
+      @media (min-width:1024px) {
+         margin-bottom: 136px;
+      }
+
+      @media (min-width:992px) {
+         &>*:first-child {
+            flex: 0 0 var(--width-left);
+         }
+
+         &>*:last-child {
+            flex: 0 1 var(--width-right);
+         }
+      }
+   }
+}
