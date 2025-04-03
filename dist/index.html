@@ -6,7 +6,7 @@
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <meta name="description" content="Описание сайта">
-<link rel="stylesheet" href="css/style.css?_v=20250330133901">
+<link rel="stylesheet" href="css/style.css?_v=20250403142234">
 </head>
 
 
@@ -131,6 +131,76 @@
          </div>
          <div>
             <a href="#0" class="button">Узнать больше</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+         <section class="project-map padding-section">
+   <div class="project-map__container">
+      <div class="project-map__body">
+         <div class="project-map__title title-section">Карта реализованных проектов</div>
+         <div class="project-map__wrapper">
+            <img class="project-map__image" src="./img/png/map.png" alt="карта" aria-hidden="true">
+            <svg class="project-map__points" width="1580" height="660" viewBox="0 0 1580 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <defs>
+                  <ellipse id="ellipse-1" cx="0" cy="0" rx="36.5" ry="20" fill="white" fill-opacity="0.3" />
+                  <ellipse id="ellipse-2" cx="0" cy="0" rx="23.5" ry="13" fill="white" fill-opacity="0.3" />
+               </defs>
+               <g class="point-map" style="--i: 1" transform="translate(276,354)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 2" transform="translate(302,421)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 3" transform="translate(659,391)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 4" transform="translate(460,412)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 5" transform="translate(554,258)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 6" transform="translate(346,353)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 7" transform="translate(562,383)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 8" transform="translate(338,387)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+               <g class="point-map" style="--i: 9" transform="translate(675,278)">
+                  <ellipse rx="8" ry="4.5" fill="white" />
+                  <use class="point-use-1" href="#ellipse-1" />
+                  <use class="point-use-2" href="#ellipse-2" />
+               </g>
+            </svg>
+         </div>
+         <div class="project-map__footer">
+            <div class="project-map__qantity">
+               Более <span>1000 </span> выполненных проектов
+            </div>
+            <div class="project-map__button">
+               <a href="#0" class="button">Узнать больше</a>
+            </div>
          </div>
       </div>
    </div>
@@ -479,6 +549,66 @@
 
    </div>
 
+   <div id="order" class="modal js-modal-hidden js-modal-close">
+   <div class="modal__container">
+      <div class="modal__body js-modal-stop-close">
+
+
+         <button class="modal__close js-modal-close" type="button">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M13 1.5L2 13M2 1.5L13 13" stroke="#D8D4A5" stroke-width="3.5" />
+            </svg>
+         </button>
+
+         <div class="modal__title">Заказать звонок</div>
+         <div class="modal__text text-20">Оставьте ваш телефон и мы свяжемся с вами</div>
+         <form class="modal__form" action="#" method="post" name="" id="">
+            <label class="modal__input-field">
+               <span class="input-name">ваш телефон</span>
+               <input class="input-field" type="text" name="name" checked>
+            </label>
+            <label class="input-check">
+               <input type="checkbox" name="assent" required>
+               <span class="input-check-icon"></span>
+               <span>Согласие на обработку <a href="#0">персональных данных</a></span>
+            </label>
+            <button type="submit" class="button-transparent">Отправить</button>
+         </form>
+      </div>
+   </div>
+</div>
+   <div id="contact" class="modal purple js-modal-hidden js-modal-close">
+   <div class="modal__container">
+      <div class="modal__body js-modal-stop-close">
+
+
+         <button class="modal__close js-modal-close" type="button">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M13 1.5L2 13M2 1.5L13 13" stroke="#D8D4A5" stroke-width="3.5" />
+            </svg>
+         </button>
+
+         <div class="modal__title">Заказать звонок</div>
+         <form class="modal__form" action="#" method="post" name="" id="">
+            <label class="modal__input-field">
+               <span class="input-name">ваше имя / электронная почта</span>
+               <input class="input-field" type="text" name="name" checked>
+            </label>
+            <label class="modal__input-field">
+               <span class="input-name">ваш телефон</span>
+               <input class="input-field" type="text" name="name" checked>
+            </label>
+            <label class="input-check">
+               <input type="checkbox" name="assent" required>
+               <span class="input-check-icon"></span>
+               <span>Согласие на обработку <a href="#0">персональных данных</a></span>
+            </label>
+            <button type="submit" class="button-transparent">Отправить</button>
+         </form>
+      </div>
+   </div>
+</div>
+
    <div class="mobile-menu">
    <div class="mobile-menu__container">
       <div class="mobile-menu__body">
@@ -491,9 +621,9 @@
    </div>
 </div>
 
-   <script defer src='./js/app.js?_v=20250330133901'></script>
+   <script defer src='./js/app.js?_v=20250403142234'></script>
 
-<script defer src='./js/swiper.js?_v=20250330133901'></script>
+<script defer src='./js/swiper.js?_v=20250403142234'></script>
 
 
 

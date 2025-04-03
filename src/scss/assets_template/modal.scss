@@ -37,12 +37,48 @@
    }
 
 
+
    &__body {
+      padding: 60px 100px;
       position: relative;
       margin: 0 auto;
       width: 100%;
-      background-color: var(--color-white);
+      max-width: 680px;
+      background-color: var(--color-green-grey);
 
+      &.purple {
+         background-color: var(--color-purple-blue);
+      }
+   }
+
+   &__close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 40px;
+      color: var(--color-pale-green);
+   }
+
+   &__text {
+      margin-bottom: 50px;
+   }
+
+   &__form {
+      .button-transparent {
+         margin-top: 60px;
+         margin-left: auto;
+         border-color: var(--color-white);
+      }
+   }
+
+   &__input-field {
+      display: block;
+      margin-bottom: 36px;
    }
 }
 

@@ -77,13 +77,16 @@ body {
       margin-bottom: 16px;
       display: flex;
       align-items: flex-start;
-      gap: 60px;
+      flex-direction: column;
+      gap: 20px;
 
       @media (min-width:768px) {
+         flex-direction: row;
          margin-bottom: 40px;
       }
 
       @media (min-width:1024px) {
+         gap: 60px;
          margin-bottom: 60px;
       }
    }
@@ -97,7 +100,19 @@ body {
       font-size: 14px;
       text-transform: uppercase;
    }
+
+   &.title-disabled {
+      color: var(--color-agate-grey);
+   }
+
+   &__arrow {
+      align-self: center;
+      display: flex;
+      align-items: center;
+   }
 }
+
+
 
 .mobile-hidden {
    @media (max-width:1023.98px) {
@@ -176,6 +191,16 @@ body {
 
 .baner-image {
    width: 100%;
+}
+
+.video-item {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 // .hidden-max1024 {

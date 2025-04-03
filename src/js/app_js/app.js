@@ -57,7 +57,8 @@ window.addEventListener('resize', () => {
 
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
-   if (event.target.closest('#button-menu')) { openMenu() }
+   if (event.target.closest('#button-menu')) { openMenu() };
+   if (event.target.closest('.js-video-play')) { playVideo(event.target.closest('.js-video-play')) };
 })
 
 
@@ -78,16 +79,12 @@ if (HEADER_LANGUAGE) {
    addValue()
 }
 
-
-
 function openMenu() {
    document.documentElement.classList.toggle('open-mobile-menu')
 }
 function closeMenu() {
    document.documentElement.classList.remove('open-mobile-menu')
 }
-
-
 
 if (document.querySelector('.team__cell-data')) {
    const list_data = document.querySelectorAll('.team__cell-data');
@@ -114,5 +111,12 @@ if (document.querySelector('.team__cell-data')) {
    setPosition();
 
    window.addEventListener('resize', setPosition)
+}
+
+function playVideo(element) {
+   let video = element.querySelector('video');
+   if (video) video.play(), video.setAttribute('controls', '');
+   let poster = element.querySelector('.service__poster');
+   if (poster) poster.remove();
 }
 

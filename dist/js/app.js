@@ -57,7 +57,8 @@ window.addEventListener('resize', () => {
 
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
-   if (event.target.closest('#button-menu')) { openMenu() }
+   if (event.target.closest('#button-menu')) { openMenu() };
+   if (event.target.closest('.js-video-play')) { playVideo(event.target.closest('.js-video-play')) };
 })
 
 
@@ -78,16 +79,12 @@ if (HEADER_LANGUAGE) {
    addValue()
 }
 
-
-
 function openMenu() {
    document.documentElement.classList.toggle('open-mobile-menu')
 }
 function closeMenu() {
    document.documentElement.classList.remove('open-mobile-menu')
 }
-
-
 
 if (document.querySelector('.team__cell-data')) {
    const list_data = document.querySelectorAll('.team__cell-data');
@@ -114,6 +111,13 @@ if (document.querySelector('.team__cell-data')) {
    setPosition();
 
    window.addEventListener('resize', setPosition)
+}
+
+function playVideo(element) {
+   let video = element.querySelector('video');
+   if (video) video.play(), video.setAttribute('controls', '');
+   let poster = element.querySelector('.service__poster');
+   if (poster) poster.remove();
 }
 
 
@@ -172,6 +176,62 @@ function moving(e, order, addressMove) {
 }
 
 
+
+/* открывает, закрывает модальные окна. */
+/*
+добавить классы
+js-modal-hidden - родительский контейнер модального окна который скрывается и показывается, задать стили скрытия
+js-modal-visible - задать стили открытия
+js-modal-close - кнопка закрытия модального окна находится внутри js-modal-hidde
+кнопка открытия, любая:
+js-modal-open - кнопка открытия модального окна
+data-modal_open="id" - id модального окна
+если надо что бы окно закрывалось при клике на пустое место (фон), добавляется атрибут js-modal-stop-close.
+js-modal-stop-close - атрибут указывает на поле, при клике на которое не должно происходить закрытие окна, 
+т.е. контейнер контента, при этом внешний родительский контейнет помечается атрибутом js-modal-close.
+допускается дополнительно кнопка закрытия внутри js-modal-stop-close.
+*/
+document.addEventListener('click', (event) => {
+   if (event.target.closest('.js-modal-open')) { openModal(event) }
+   if (event.target.closest('.js-modal-close')) { testModalStopClose(event) }
+})
+function openModal(event) {
+   let modalElement = event.target.closest('.js-modal-open').dataset.modal_open;
+   if (typeof modalElement !== "undefined" && document.querySelector(`#${modalElement}`)) {
+      document.querySelector(`#${modalElement}`).classList.add('js-modal-visible');
+      document.body.classList.add('body-overflow')
+   }
+}
+function testModalStopClose(event) {
+   if (event.target.closest('.js-modal-stop-close') &&
+      event.target.closest('.js-modal-stop-close') !==
+      event.target.closest('.js-modal-close').closest('.js-modal-stop-close')) {
+      return
+   }
+   closeModal(event);
+}
+function closeModal(event) {
+   event.target.closest('.js-modal-hidden').classList.remove('js-modal-visible');
+   if (!document.querySelector('.js-modal-visible')) {
+      document.body.classList.remove('body-overflow');
+   }
+}
+// функция закрытия модального окна (передать id модального окна)
+function initCloseModal(modalElement) {
+   if (document.querySelector(`#${modalElement}`)) {
+      document.querySelector(`#${modalElement}`).classList.remove('js-modal-visible');
+   }
+   if (!document.querySelector('.js-modal-visible')) {
+      document.body.classList.remove('body-overflow');
+   }
+}
+// функция открытия модального окна (передать id модального окна)
+function initOpenModal(modalElement) {
+   if (document.querySelector(`#${modalElement}`)) {
+      document.querySelector(`#${modalElement}`).classList.add('js-modal-visible');
+      document.body.classList.add('body-overflow')
+   }
+}
 
 if (document.querySelector('.js-moving-line')) {
    queueMicrotask(() => {

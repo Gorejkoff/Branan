@@ -1,0 +1,142 @@
+.project-map {
+
+   &__container {}
+
+   &__body {
+      position: relative;
+      min-height: min(653px, 110vw);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__wrapper {
+      position: relative;
+
+      @media (min-width:1024px) {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+      }
+   }
+
+   &__title {
+      max-width: 460px;
+   }
+
+   &__footer {
+      @media (min-width:1024px) {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+
+   &__qantity {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 104%;
+      width: min-content;
+
+      @media (min-width:1024px) {
+         margin-bottom: 0;
+         font-size: 24px;
+      }
+
+      span {
+         font-family: "Inter";
+         line-height: 104%;
+         font-size: 30px;
+
+         @media (min-width:768px) {
+            font-size: 50px;
+         }
+
+         @media (min-width:1024px) {
+            font-size: 80px;
+         }
+      }
+   }
+
+   &__button {}
+
+   &__image {
+      width: 100%;
+
+      @media (min-width:1024px) {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__points {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      .point-map {
+         cursor: pointer;
+      }
+
+      .point-use-1 {
+         opacity: 0;
+         animation: points-1 5s ease infinite calc(var(--i) * 1.3s);
+      }
+
+      .point-use-2 {
+         opacity: 0;
+         animation: points-2 5s ease infinite calc(var(--i) * 1.3s);
+      }
+   }
+}
+
+@keyframes points-1 {
+   0% {
+      opacity: 0;
+   }
+
+   15% {
+      opacity: 0;
+   }
+
+   60% {
+      opacity: 1;
+   }
+
+   80% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes points-2 {
+   0% {
+      opacity: 0;
+   }
+
+
+   60% {
+      opacity: 1;
+   }
+
+   80% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
