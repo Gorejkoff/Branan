@@ -1,7 +1,7 @@
 .modal {
    --height-modal: 100vh;
    position: fixed;
-   top: var(--header-h);
+   top: 0;
    left: 0;
    z-index: 19;
    width: 100vw;
@@ -11,40 +11,25 @@
    overflow-y: auto;
    overflow-x: hidden;
 
-   @supports(height: 100dvh) {
-      --height-modal: 100dvh;
-   }
-
-   @media (min-width:768px) {
-      top: 0;
-      --height-modal: 100vh;
-
-      @supports(height: 100dvh) {
-         --height-modal: 100dvh
-      }
-   }
-
    &__container {
       padding-top: 20px;
       padding-bottom: 20px;
       min-height: var(--height-modal);
       display: flex;
       align-items: center;
-
-      @media (max-width:767.98px) {
-         padding: 0;
-      }
    }
 
-
-
    &__body {
-      padding: 60px 100px;
+      padding: 60px 20px;
       position: relative;
       margin: 0 auto;
       width: 100%;
       max-width: 680px;
       background-color: var(--color-green-grey);
+
+      @media (min-width:768px) {
+         padding: 60px 100px;
+      }
 
       &.purple {
          background-color: var(--color-purple-blue);
@@ -60,8 +45,12 @@
    &__title {
       margin-bottom: 20px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 32px;
       color: var(--color-pale-green);
+
+      @media (min-width:768px) {
+         font-size: 40px;
+      }
    }
 
    &__text {
