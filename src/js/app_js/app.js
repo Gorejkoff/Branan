@@ -22,7 +22,7 @@ const MIN768 = window.matchMedia('(min-width: 768px)');
 
 // variables
 const HEADER = document.getElementById('header');
-
+const SEARCH = document.querySelector('.js-search');
 
 
 function throttle(callee, timeout) {
@@ -59,6 +59,8 @@ window.addEventListener('resize', () => {
 document.documentElement.addEventListener("click", (event) => {
    if (event.target.closest('#button-menu')) { openMenu() };
    if (event.target.closest('.js-video-play')) { playVideo(event.target.closest('.js-video-play')) };
+   if (event.target.closest('.js-open-search')) { openSearch() }
+   else if (!event.target.closest('.js-search')) { closeSearch() };
 })
 
 
@@ -77,14 +79,14 @@ if (HEADER_LANGUAGE) {
       }
    }
    addValue()
-}
+};
 
 function openMenu() {
    document.documentElement.classList.toggle('open-mobile-menu')
-}
+};
 function closeMenu() {
    document.documentElement.classList.remove('open-mobile-menu')
-}
+};
 
 if (document.querySelector('.team__cell-data')) {
    const list_data = document.querySelectorAll('.team__cell-data');
@@ -94,7 +96,7 @@ if (document.querySelector('.team__cell-data')) {
    function setProp() {
       padding_container = parseInt(window.getComputedStyle(document.body).getPropertyValue('--padding-container'))
       max_right_position = document.body.clientWidth - padding_container;
-   }
+   };
 
    function setPositionElement(e) {
       e.style.transform = ``;
@@ -103,20 +105,26 @@ if (document.querySelector('.team__cell-data')) {
       if (value_offset < 0) {
          e.style.transform = `translateX(${value_offset}px)`;
       }
-   }
+   };
    function setPosition() {
       setProp();
       list_data.forEach(e => { setPositionElement(e) })
-   }
+   };
    setPosition();
 
    window.addEventListener('resize', setPosition)
-}
-
+};
 function playVideo(element) {
    let video = element.querySelector('video');
    if (video) video.play(), video.setAttribute('controls', '');
    let poster = element.querySelector('.service__poster');
    if (poster) poster.remove();
-}
+};
+function openSearch() {
+   if (SEARCH) { SEARCH.classList.add('visible') }
+};
+function closeSearch() {
+   if (SEARCH) { SEARCH.classList.remove('visible') }
+};
+
 
